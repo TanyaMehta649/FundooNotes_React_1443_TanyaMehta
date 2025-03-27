@@ -1,0 +1,151 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+.notesContainer {
+  transition: margin-left 0.1s ease-in-out;
+
+  &.expanded {
+    margin-left: 16.5rem;
+  }
+
+  &.collapsed {
+    margin-left: 10rem;
+  }
+}
+
+.notesGrid {
+  display: flex;
+  flex-wrap: wrap; 
+  margin-top: 3rem;
+  gap: 1rem;
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  transition: all 0.3s ease-in-out;
+  
+
+  .add-notes input {
+    font-size: 16px;
+    font-weight: 500;
+    color: #5f6368;
+    background: #f1f3f4;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 15px;
+    width: 100%;
+    max-width: 600px;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .add-notes input:hover {
+    background: #e8eaed;
+  }
+
+  .add-notes input:focus {  
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .notesContainer {
+    margin-left: 8rem;
+  }
+
+  .notesGrid {
+    gap: 0.8rem;
+  }
+
+  .add-notes input {
+    font-size: 14px;
+    max-width: 100%;
+    padding: 10px 12px;
+  }
+}
+
+
+@media only screen and (max-width: 480px) {
+  .notesContainer {
+    margin-left: 0; 
+  }
+
+  .notesGrid {
+    gap: 0.5rem;
+    margin-top: 1.5rem; 
+  }
+
+  .add-notes input {
+    font-size: 12px;
+    max-width: 100%;
+    padding: 8px 10px;
+  }
+}
+
+
+@media only screen and (min-width: 1024px) {
+  .notesContainer {
+    margin-left: 15rem; 
+  }
+
+  .notesGrid {
+    gap: 1.5rem;
+  }
+
+  .add-notes input {
+    font-size: 16px;
+    padding: 12px 15px;
+  }
+}
+// .list-view {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   gap: 1px;
+//   padding: 20px;
+//   width: 50rem !important;
+// }
+
+// .list-item {
+//   background: #ffffff;
+//   padding: 10px;
+//   margin-left: 50rem;
+// }
+.listView {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+.listItem {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.masonryGrid {
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+}
+
+.masonryColumn {
+  background-clip: padding-box;
+}

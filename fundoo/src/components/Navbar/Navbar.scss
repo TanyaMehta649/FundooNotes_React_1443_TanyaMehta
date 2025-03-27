@@ -1,0 +1,253 @@
+.fundoo-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 11vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 25px;
+  background-color: white;
+  box-shadow: 0px 1px 5px #ececec;
+  z-index: 1000;
+  gap: 1rem;
+
+  .fundoo-navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .fundoo-navbar-logo {
+    display: flex;
+    align-items: center;
+
+    .header-image {
+      width: 3vw;
+    }
+  }
+
+  .header-img {
+    width: 3vw;
+    height: 6vh;
+  }
+
+  h2 {
+    margin-left: 10px;
+    font-size: 22px;
+    font-weight: 500;
+    color: #0d0d0d;
+  }
+
+  .fundoo-navbar-search {
+    display: flex;
+    align-items: center;
+    background-color: #f1f3f4;
+    padding: 5px 15px;
+    border-radius: 8px;
+    width: 60%;
+    height: 8vh;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+
+    input {
+      border: none;
+      outline: none;
+      margin-left: 10px;
+      width: 100%;
+      font-size: 16px;
+      background-color: transparent;
+    }
+  }
+
+  .fundoo-navbar-icons {
+    display: flex;
+    align-items: center;
+
+    .icon {
+      margin: 0 12px;
+      cursor: pointer;
+      color: gray;
+      transition: color 0.2s;
+
+      &:hover {
+        color: black;
+      }
+    }
+  }
+}
+.fundoo-drawer .MuiDrawer-paper {
+  width: 250px;
+  top: 66.5px;
+  border-right: none;
+  background-color: transparent !important;
+  transition: width 0.3s ease;
+
+  .fundoo-drawer.collapsed .MuiDrawer-paper {
+    width: 70px;
+  }
+
+  .drawer-icon {
+    display: flex;
+    justify-content: center;
+  }
+
+  .fundoo-drawer.collapsed .MuiListItemText-root {
+    display: none !important;
+  }
+
+  .drawer-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: -1rem !important;
+
+    &:hover {
+      background-color: rgb(254, 239, 195) !important;
+    }
+
+    .drawer-item {
+      display: flex;
+      align-items: center;
+      padding: 12px 20px;
+      font-weight: 500;
+      color: #5f6368;
+      cursor: pointer;
+      transition: background 0.3s;
+      
+      &:hover {
+        background-color: rgb(254, 239, 195) !important;
+      }
+
+      .drawer-icon {
+        margin-right: 20px;
+        color: #5e6063;
+      }
+
+      &.hover {
+        background-color: rgb(254, 239, 195) !important;
+        color: #1967d2;
+
+        .drawer-icon {
+          color: #1967d2;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .fundoo-navbar {
+    padding: 5px 15px;
+    height: 10vh;
+  }
+
+  .fundoo-navbar-left h2 {
+    font-size: 18px;
+  }
+
+  .fundoo-navbar-search {
+    width: 50%; 
+  }
+
+  .fundoo-navbar-icons .icon {
+    font-size: 18px; 
+  }
+
+  .fundoo-drawer .MuiDrawer-paper {
+    width: 220px;
+  }
+
+  .fundoo-drawer.collapsed .MuiDrawer-paper {
+    width: 60px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .fundoo-navbar {
+    height: 9vh;
+    padding: 5px 10px;
+  }
+
+  .fundoo-navbar-left h2 {
+    font-size: 16px; 
+  }
+
+  .fundoo-navbar-search {
+    width: 40%; 
+  }
+
+  .fundoo-navbar-icons .icon {
+    font-size: 16px;
+  }
+
+  .fundoo-drawer .MuiDrawer-paper {
+    width: 200px;
+  }
+
+  .fundoo-drawer.collapsed .MuiDrawer-paper {
+    width: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .fundoo-navbar {
+    height: 8vh;
+    padding: 5px 15px;
+    gap: 0.5rem;
+    flex-direction: row;
+    
+    .fundoo-navbar-left {
+      gap: 0.5rem;
+    }
+
+    .fundoo-navbar-logo {
+      .header-image {
+        width: 6vw;
+      }
+    }
+
+    .header-img {
+      width: 6vw;
+      height: 5vh;
+    }
+
+    h2 {
+      font-size: 18px;
+    }
+
+    .fundoo-navbar-search {
+      width: 80%;
+      height: 6vh;
+      padding: 5px 10px;
+      
+      input {
+        font-size: 14px;
+      }
+    }
+
+    .fundoo-navbar-icons {
+      .icon {
+        margin: 0 8px;
+      }
+    }
+  }
+
+  .fundoo-drawer {
+    .MuiDrawer-paper {
+      width: 200px;
+      top: 60px;
+
+      .fundoo-drawer.collapsed .MuiDrawer-paper {
+        width: 50px;
+      }
+
+      .drawer-item {
+        padding: 10px 15px;
+        font-size: 14px;
+      }
+    }
+  }
+}

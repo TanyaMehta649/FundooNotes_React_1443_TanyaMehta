@@ -1,0 +1,122 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+.notesContainer {
+  transition: margin-left 0.1s ease-in-out;
+}
+
+.expanded {
+  margin-left: 22rem; 
+}
+
+.collapsed {
+  margin-left: 10rem; 
+}
+
+.notesGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem; 
+  justify-content: flex-start;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 8rem;
+  align-items: flex-start; 
+  transition: all 0.3s ease-in-out;
+}
+
+
+.add-notes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+
+  input {
+    font-size: 16px;
+    font-weight: 500;
+    color: #5f6368;
+    background: #f1f3f4;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 15px;
+    width: 100%;
+    max-width: 600px;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+  }
+
+  input:hover {
+    background: #e8eaed;
+  }
+
+  input:focus {
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .notesContainer {
+    margin-left: 5rem; 
+  }
+
+  .notesGrid {
+    gap: 1.5rem; 
+    padding: 1rem;
+  }
+
+  .add-notes input {
+    font-size: 14px; 
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .notesContainer {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .notesGrid {
+    gap: 1rem; 
+    margin-top: 6rem; 
+  }
+
+  .add-notes input {
+    font-size: 14px; 
+    max-width: 100%; 
+    padding: 10px 12px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .notesContainer {
+    margin-left: 0; 
+    padding: 1rem;
+  }
+
+  .notesGrid {
+    gap: 0.8rem;
+    margin-top: 4rem; 
+  }
+
+  .add-notes input {
+    font-size: 12px; 
+    max-width: 100%; 
+    padding: 8px 10px;
+  }
+}
+
